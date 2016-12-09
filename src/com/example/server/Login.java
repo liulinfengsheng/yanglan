@@ -127,6 +127,7 @@ public class Login extends JFrame implements ActionListener{
 	}
 	//入口函数
 	public static void main(String []argv){
-		new Login();
+		//new Login();
+		new MainFrame();
 	}
 }

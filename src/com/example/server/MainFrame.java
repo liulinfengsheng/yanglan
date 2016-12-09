@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
 
 import javax.swing.AbstractButton;
 import javax.swing.ImageIcon;
@@ -40,6 +41,8 @@ public class MainFrame implements ActionListener {
 	private JMenuItem mi2;
 	
 	private AbstractButton m2;
+
+	private LocaMain loca;
 	
 	
 	public MainFrame(){
@@ -108,7 +111,8 @@ public class MainFrame implements ActionListener {
 	    	}
 		if(e.getSource()== btnLocation){
 			 btnLocation.setLabel("正在定位");
-	     	 LocaMain loca=new LocaMain(area);//LocaMain是一个线程类，④
+	     	 
+			loca = new LocaMain(area);
 	     	 loca.start();//开启一个线程
 	    	}
 			if(e.getSource()==mil){
