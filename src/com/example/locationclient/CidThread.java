@@ -38,7 +38,7 @@ public class CidThread implements Runnable {
 	public void run() {
 		
 		try {
-			s=new Socket("192.168.1.100",30005);
+			s=new Socket("192.168.1.103",30005);
 			os=s.getOutputStream();//输出流对象os
 						
 			Looper.prepare();//1.为当前线程创建Looper对象，并随之配套有MessageQueue,prepare()方法保证每个线程最多只有一个Looper对象，
